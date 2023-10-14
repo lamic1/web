@@ -17,5 +17,6 @@
   };
 
   // Initialize Firebase
+  // 외부에서 사용하는거라서 export 필수
   export const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
