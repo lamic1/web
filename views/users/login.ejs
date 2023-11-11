@@ -31,6 +31,7 @@
     const auth=getAuth(app);
 
     $(frm).on("submit", function(e){
+        //submit방지
         e.preventDefault();
         //유효성체크
         const email=$(frm.email).val();
@@ -43,7 +44,7 @@
             $(frm.password).focus();
 
         }else{
-        //로그인
+        //로그인체크
         //alert(email + pass);
         signInWithEmailAndPassword(auth, email, pass).then(success=> {
             console.log(success)
